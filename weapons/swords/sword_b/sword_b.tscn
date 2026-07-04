@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cl4qxmng0sneg"]
+
+[ext_resource type="PackedScene" uid="uid://cc4n27gmayygm" path="res://weapons/swords/sword_b/models/sword_1.blend" id="1_xp5jd"]
+
+[node name="SwordB" type="Node3D" unique_id=69512364]
+
+[node name="sword_1" parent="." unique_id=1251255565 instance=ExtResource("1_xp5jd")]

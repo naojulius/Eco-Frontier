@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c0oj48pg3w6v7"]
+
+[ext_resource type="Shader" uid="uid://cmg5biyygstyk" path="res://scripts/outline/outline.gdshader" id="1_makcc"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_makcc")
+shader_parameter/outline_color = Color(0.094684996, 0.09468501, 0.09468501, 1)
+shader_parameter/outline_width = 1.0
+shader_parameter/constant_width = true

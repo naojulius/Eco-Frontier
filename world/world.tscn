@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://bkpfmffvurom0"]
+
+[ext_resource type="PackedScene" uid="uid://d0f51lbir27m8" path="res://characters/character.tscn" id="1_6xmxd"]
+[ext_resource type="Script" uid="uid://cu04ixuuii27h" path="res://world/terrain.gd" id="1_4717r"]
+[ext_resource type="PackedScene" uid="uid://d24lv2yshjyci" path="res://natures/trees/tree_a.tscn" id="2_4717r"]
+[ext_resource type="ArrayOccluder3D" uid="uid://bxixeisp8w5yk" path="res://world/occluder/world.occ" id="2_fn3g3"]
+[ext_resource type="Texture2D" uid="uid://8cmg13lue1tt" path="res://natures/grass/textures/sprite_0058.png" id="2_sc4t8"]
+[ext_resource type="Texture2D" uid="uid://ef7b3gamcule" path="res://natures/grass/textures/sprite_0059.png" id="3_ai45w"]
+[ext_resource type="PackedScene" uid="uid://bh20fti6o7nfa" path="res://natures/trees/tree_b.tscn" id="3_h5o24"]
+[ext_resource type="Texture2D" uid="uid://c62hcb4j55y8x" path="res://natures/grass/textures/sprite_0076.png" id="4_4papg"]
+[ext_resource type="PackedScene" uid="uid://c2612nbe16m8n" path="res://natures/trees/tree_c.tscn" id="4_mmdvd"]
+[ext_resource type="PackedScene" uid="uid://dphhj4y4ii1yw" path="res://natures/stones/monuments/monument_a.tscn" id="9_fyhu2"]
+[ext_resource type="PackedScene" uid="uid://dwj06b8tehrw2" path="res://natures/stones/rocks/rock_a.tscn" id="10_ov2xu"]
+[ext_resource type="PackedScene" uid="uid://c2fe6xlrjipyt" path="res://natures/buildings/houses/house_a.tscn" id="11_mad0u"]
+[ext_resource type="PackedScene" uid="uid://c1nfc3bochxjh" path="res://natures/buildings/houses/house_b.tscn" id="12_ocfjn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6xmxd"]
+
+[sub_resource type="Sky" id="Sky_tcf2h"]
+sky_material = SubResource("ProceduralSkyMaterial_6xmxd")
+
+[sub_resource type="Environment" id="Environment_4717r"]
+background_mode = 2
+sky = SubResource("Sky_tcf2h")
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_g312j"]
+
+[sub_resource type="Gradient" id="Gradient_tcf2h"]
+offsets = PackedFloat32Array(0.2, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4717r"]
+noise_type = 2
+frequency = 0.03
+cellular_jitter = 3.0
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 50.0
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 1.5
+domain_warp_fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_h5o24"]
+noise = SubResource("FastNoiseLite_4717r")
+color_ramp = SubResource("Gradient_tcf2h")
+seamless = true
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_mmdvd"]
+_shader_parameters = {
+&"bias_distance": null,
+&"blend_sharpness": null,
+&"depth_blur": null,
+&"enable_macro_variation": null,
+&"enable_projection": null,
+&"flat_terrain_normals": null,
+&"macro_variation1": null,
+&"macro_variation2": null,
+&"macro_variation_slope": null,
+&"mipmap_bias": null,
+&"noise1_angle": null,
+&"noise1_offset": null,
+&"noise1_scale": null,
+&"noise2_scale": null,
+&"noise_texture": SubResource("NoiseTexture2D_h5o24"),
+&"projection_threshold": null
+}
+show_checkered = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ai45w"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.54901963, 0.7176471, 0.1882353, 1)
+albedo_texture = ExtResource("2_sc4t8")
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_4papg"]
+name = "Grass_1"
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_ai45w")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4papg"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.64524144, 0.85690784, 0.25026736, 1)
+albedo_texture = ExtResource("3_ai45w")
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_fyhu2"]
+name = "Grass_2"
+id = 1
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_4papg")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 100.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fyhu2"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.3536849, 0.66793996, 0.18644172, 1)
+albedo_texture = ExtResource("4_4papg")
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_ov2xu"]
+name = "Grass_3"
+id = 2
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_fyhu2")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_ai45w"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_4papg"), SubResource("Terrain3DMeshAsset_fyhu2"), SubResource("Terrain3DMeshAsset_ov2xu")])
+
+[node name="World" type="Node3D" unique_id=147165971]
+
+[node name="Environment" type="Node" parent="." unique_id=1010549127]
+
+[node name="Sun" type="DirectionalLight3D" parent="Environment" unique_id=1961867507]
+transform = Transform3D(1, 0, 0, 0, 0.8908163, 0.4543637, 0, -0.4543637, 0.8908163, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=945905752]
+environment = SubResource("Environment_4717r")
+
+[node name="Terrain" type="Node3D" parent="." unique_id=1536795703]
+script = ExtResource("1_4717r")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="Terrain" unique_id=505616951]
+navigation_mesh = SubResource("NavigationMesh_g312j")
+
+[node name="Terrain" type="Terrain3D" parent="Terrain/NavigationRegion3D" unique_id=262427104]
+data_directory = "res://world/data"
+material = SubResource("Terrain3DMaterial_mmdvd")
+assets = SubResource("Terrain3DAssets_ai45w")
+show_checkered = true
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="Terrain/NavigationRegion3D/Terrain" unique_id=1566329831]
+occluder = ExtResource("2_fn3g3")
+
+[node name="Trees" type="Node3D" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D" unique_id=664905276]
+
+[node name="TreeA_1" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=681934556 instance=ExtResource("2_4717r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 72)
+
+[node name="TreeA_5" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1916396545 instance=ExtResource("2_4717r")]
+transform = Transform3D(-0.6566517, 0, -0.754194, 0, 1, 0, 0.754194, 0, -0.6566517, -63.900047, 0.4450922, 54.25418)
+
+[node name="TreeA_2" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1451459866 instance=ExtResource("2_4717r")]
+transform = Transform3D(-0.98367834, 0, 0.17993549, 0, 1, 0, -0.17993549, 0, -0.98367834, -10.677813, 9.545143, 72)
+
+[node name="TreeB_1" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=171241633 instance=ExtResource("3_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.489753, 74.756134)
+
+[node name="TreeB_2" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1088989479 instance=ExtResource("3_h5o24")]
+transform = Transform3D(-0.9866888, 0, 0.16261983, 0, 1, 0, -0.16261983, 0, -0.9866888, -5.0387764, 9.666116, 71.84742)
+
+[node name="TreeA_3" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1847749505 instance=ExtResource("2_4717r")]
+transform = Transform3D(-0.9999374, 0, 0.011187233, 0, 1, 0, -0.011187233, 0, -0.9999374, -20.3897, 12.875656, 82.89084)
+
+[node name="TreeA_4" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1424018478 instance=ExtResource("2_4717r")]
+transform = Transform3D(0.28265962, 0, -0.95922023, 0, 1, 0, 0.95922023, 0, 0.28265962, -4.872798, 12.795506, 78.61042)
+
+[node name="TreeB_3" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=339678223 instance=ExtResource("3_h5o24")]
+transform = Transform3D(-0.9999374, 0, 0.011187233, 0, 1, 0, -0.011187233, 0, -0.9999374, -20.358866, 11.726699, 80.13488)
+
+[node name="TreeB_4" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=427521836 instance=ExtResource("3_h5o24")]
+transform = Transform3D(1.1817694, 0, -0.20837757, 0, 1.2, 0, 0.20837757, 0, 1.1817694, -17.353752, 13.577561, 83.09978)
+
+[node name="TreeC_1" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1572030999 instance=ExtResource("4_mmdvd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.299145, 11.633863, 83.49914)
+
+[node name="TreeC_2" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1358299383 instance=ExtResource("4_mmdvd")]
+transform = Transform3D(0.8058583, -0.112148546, -0.5813906, 0.049937926, 0.9912737, -0.12199538, 0.58999866, 0.069277525, 0.8044265, -0.054510117, 6.626981, 62.661293)
+
+[node name="Monuments" type="Node3D" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D" unique_id=419857561]
+
+[node name="MonumentA" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Monuments" unique_id=1677257631 instance=ExtResource("9_fyhu2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.36547, 10.915903, 76.499176)
+
+[node name="Rocks" type="Node3D" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D" unique_id=1522357756]
+
+[node name="RockA_1" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Rocks" unique_id=534548321 instance=ExtResource("10_ov2xu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.500652, 13.110502, 78.673256)
+
+[node name="RockA_4" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Rocks" unique_id=325771091 instance=ExtResource("10_ov2xu")]
+transform = Transform3D(-0.32525462, 0, 0.9456265, 0, 1, 0, -0.9456265, 0, -0.32525462, -58.090137, 1.0566025, 56.075752)
+
+[node name="RockA_6" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Rocks" unique_id=29821390 instance=ExtResource("10_ov2xu")]
+transform = Transform3D(-0.32525462, 0, 0.9456265, 0, 1, 0, -0.9456265, 0, -0.32525462, -68.19104, 1.0566025, 32.738018)
+
+[node name="RockA_5" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Rocks" unique_id=1763848859 instance=ExtResource("10_ov2xu")]
+transform = Transform3D(0.031100214, 0, -1.9997581, 0, 2, 0, 1.9997581, 0, 0.031100214, -58.090137, 1.0566025, 57.806366)
+
+[node name="RockA_2" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Rocks" unique_id=1344012378 instance=ExtResource("10_ov2xu")]
+transform = Transform3D(-1.4692059, -0.9227752, 0.9949473, 1.0637435, -1.6936499, 0, 0.8425462, 0.52918434, 1.7349582, -44.33486, 10.422764, 70.09349)
+
+[node name="RockA_3" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Rocks" unique_id=1772120377 instance=ExtResource("10_ov2xu")]
+transform = Transform3D(0.62319946, 0.3914176, -1.8596814, 1.0637435, -1.6936499, 1.2862929e-08, -1.5748246, -0.9891118, -0.7359248, -54.774788, 11.175623, 77.55952)
+
+[node name="Buildings" type="Node3D" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D" unique_id=2094559338]
+
+[node name="HouseA_1" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Buildings" unique_id=24933968 instance=ExtResource("11_mad0u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.30343, 1.2594562, 50.968307)
+
+[node name="HouseA_2" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Buildings" unique_id=470977563 instance=ExtResource("11_mad0u")]
+transform = Transform3D(0.013822649, 0, 0.99990445, 0, 1, 0, -0.99990445, 0, 0.013822649, -66.34654, 1.2509074, 47.07457)
+
+[node name="HouseB" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Buildings" unique_id=1634517663 instance=ExtResource("12_ocfjn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.113815, 1.3209903, 30.19944)
+
+[node name="Character" parent="." unique_id=1609781627 instance=ExtResource("1_6xmxd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38067794, 0)

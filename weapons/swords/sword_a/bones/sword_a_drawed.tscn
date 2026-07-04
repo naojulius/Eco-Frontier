@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cia2ycrirl5p2"]
+
+[ext_resource type="Script" uid="uid://c10uho8lagngd" path="res://weapons/weapon_drawed.gd" id="1_amyfp"]
+[ext_resource type="PackedScene" uid="uid://ddm5vdlc6rdn7" path="res://weapons/swords/sword_a/scenes/sword_a.tscn" id="1_y8s1f"]
+
+[node name="SwordADrawed" type="BoneAttachment3D" unique_id=673346682]
+transform = Transform3D(0.041628808, -0.050670914, -0.99785024, 0.026287163, -0.9983119, 0.051791318, -0.9987873, -0.028386615, -0.04022665, 0, 0, 0)
+bone_name = "Hand.R"
+bone_idx = 11
+script = ExtResource("1_amyfp")
+
+[node name="Weapon" parent="." unique_id=323401683 instance=ExtResource("1_y8s1f")]
+transform = Transform3D(-0.30652726, 0.9518115, -0.009696202, -0.9518608, -0.30649942, 0.004276946, 0.0010988866, 0.0105406325, 0.99994344, -0.013970748, -0.036613613, 0.0022669435)
+visible = false

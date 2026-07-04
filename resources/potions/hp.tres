@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Potion" format=3 uid="uid://dhhj4lyo8ro7y"]
+
+[ext_resource type="Script" uid="uid://c3paeto0vqi6x" path="res://resources/potions/Potions.gd" id="1_3j4qh"]
+
+[resource]
+script = ExtResource("1_3j4qh")
+potion_description = "An essential item that restores vital health points. It seals open wounds instantly or gradually heals over time, allowing the player to survive brutal enemy strikes and prolong exploration through treacherous, unforgiving game environments."
+metadata/_custom_type_script = "uid://c3paeto0vqi6x"

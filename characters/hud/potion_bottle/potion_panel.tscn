@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://b35qjub8hkkfr"]
+
+[ext_resource type="Script" uid="uid://ctw5oasliyixp" path="res://characters/hud/potion_bottle/potion_panel.gd" id="1_qwe6o"]
+[ext_resource type="PackedScene" uid="uid://dtqecwolstgqm" path="res://characters/hud/potion_bottle/potion_bottle.blend" id="2_7ewfd"]
+[ext_resource type="Texture2D" uid="uid://cx1l03cflg7qa" path="res://assets/textures/arrows/chevron.png" id="3_7ewfd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b1u1o"]
+bg_color = Color(0, 0, 0, 0.9764706)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ke030"]
+albedo_color = Color(1, 1, 1, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwe6o"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.19937277, 0.19937277, 0.19937277, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Potion_Panel_0" type="Panel" unique_id=628666754]
+custom_minimum_size = Vector2(90, 90)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -45.0
+offset_right = 45.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(45, 45)
+theme_override_styles/panel = SubResource("StyleBoxFlat_b1u1o")
+script = ExtResource("1_qwe6o")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=888198272]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=437702742]
+transparent_bg = true
+handle_input_locally = false
+canvas_cull_mask = 4293918722
+size = Vector2i(90, 90)
+render_target_update_mode = 4
+
+[node name="Camera" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=483307876]
+cull_mask = 2
+
+[node name="PotionContainer" type="Node3D" parent="SubViewportContainer/SubViewport/Camera" unique_id=1488062038]
+transform = Transform3D(0.7530009, 0.6580195, 0, -0.6580195, 0.7530009, 0, 0, 0, 1, 0, 0, -0.26494598)
+
+[node name="potion_bottle" parent="SubViewportContainer/SubViewport/Camera/PotionContainer" unique_id=2048828043 instance=ExtResource("2_7ewfd")]
+
+[node name="Bottle" parent="SubViewportContainer/SubViewport/Camera/PotionContainer/potion_bottle" index="0" unique_id=800187653]
+layers = 2
+material_override = SubResource("StandardMaterial3D_ke030")
+
+[node name="Hat" parent="SubViewportContainer/SubViewport/Camera/PotionContainer/potion_bottle" index="1" unique_id=605836863]
+layers = 2
+
+[node name="BottleLight" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/Camera" unique_id=1217658266]
+transform = Transform3D(1, 0, 0, 0, 0.94505167, 0.32692102, 0, -0.32692102, 0.94505167, 0, 0, 0)
+layers = 2
+light_energy = 0.15
+
+[node name="QuantityLabel" type="Label" parent="." unique_id=315843733]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+offset_right = 30.0
+offset_bottom = 30.0
+pivot_offset = Vector2(15, 15)
+theme_override_colors/font_color = Color(0.2, 0.2, 0.2, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_qwe6o")
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArrowUp" type="TextureRect" parent="." unique_id=2083564920]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = -34.0
+offset_right = 20.0
+offset_bottom = 6.0
+grow_horizontal = 2
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("3_7ewfd")
+expand_mode = 1
+
+[node name="ArrowDown" type="TextureRect" parent="." unique_id=1471221439]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 84.0
+offset_right = 20.0
+offset_bottom = 124.0
+grow_horizontal = 2
+rotation = 3.1415927
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("3_7ewfd")
+expand_mode = 1
+
+[editable path="SubViewportContainer/SubViewport/Camera/PotionContainer/potion_bottle"]

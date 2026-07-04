@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dv1r5bedkd8sd"]
+
+[ext_resource type="PackedScene" uid="uid://pnn5k5iop5ke" path="res://weapons/helmets/helmet_a/model/helmet_0.blend" id="1_ce4fn"]
+
+[node name="HelmetA" type="Node3D" unique_id=196118936]
+
+[node name="helmet_0" parent="." unique_id=2085930116 instance=ExtResource("1_ce4fn")]

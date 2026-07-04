@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dqmd2yj4shqex"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btygi"]
+bg_color = Color(0, 0, 0.06666667, 0.16862746)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.31764707)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8l556"]
+bg_color = Color(0.7764706, 0.15686275, 0.15686275, 1)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0.26876277, 0.26876274, 0.26876274, 0.24705882)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tupud"]
+bg_color = Color(0.12941177, 0.5882353, 0.9529412, 1)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0.26876277, 0.26876274, 0.26876274, 0.24705882)
+border_blend = true
+
+[node name="Bars" type="Control" unique_id=637213695]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=516363802]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 371.0
+offset_bottom = 67.0
+
+[node name="Hp" type="ProgressBar" parent="VBoxContainer" unique_id=576863476]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_btygi")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8l556")
+value = 95.0
+show_percentage = false
+
+[node name="Mp" type="ProgressBar" parent="VBoxContainer" unique_id=1524822244]
+custom_minimum_size = Vector2(200, 15)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_btygi")
+theme_override_styles/fill = SubResource("StyleBoxFlat_tupud")
+value = 60.0
+show_percentage = false

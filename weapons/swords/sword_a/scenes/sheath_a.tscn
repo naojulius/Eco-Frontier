@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cxtvv2l6npxv1"]
+
+[ext_resource type="Script" uid="uid://b1sjpmc0f670w" path="res://scripts/mesh.gd" id="1_yvnrq"]
+[ext_resource type="PackedScene" uid="uid://bcwshpormvh2h" path="res://weapons/swords/sword_a/models/sheath_a.blend" id="2_qieq3"]
+
+[node name="Sheath_A" type="Node3D" unique_id=2013162564]
+script = ExtResource("1_yvnrq")
+mesh_layer = 2
+
+[node name="sheath_a" parent="." unique_id=303680556 instance=ExtResource("2_qieq3")]
+
+[node name="Sheath" parent="sheath_a" index="0" unique_id=845825553]
+layers = 3
+
+[editable path="sheath_a"]

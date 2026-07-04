@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d24lv2yshjyci"]
+
+[ext_resource type="PackedScene" uid="uid://cx2ayicsyeclm" path="res://natures/trees/models/tree_a.blend" id="1_c1h7q"]
+[ext_resource type="Script" uid="uid://cp0dcwlufi32m" path="res://scripts/outline/outline.gd" id="1_ejc2o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c1h7q"]
+size = Vector3(1.9951172, 6.592491, 2.040039)
+
+[node name="TreeA" type="Node3D" unique_id=681934556]
+script = ExtResource("1_ejc2o")
+
+[node name="tree_a" parent="." unique_id=173074820 instance=ExtResource("1_c1h7q")]
+
+[node name="StaticBody" type="StaticBody3D" parent="." unique_id=1441429495]
+
+[node name="Collision_1" type="CollisionShape3D" parent="StaticBody" unique_id=477210293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.1327782, 0.008270264)
+shape = SubResource("BoxShape3D_c1h7q")
+
+[editable path="tree_a"]

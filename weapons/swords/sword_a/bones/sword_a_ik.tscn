@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cdpt8qgflnklh"]
+
+[ext_resource type="Script" uid="uid://cypj1c71605ol" path="res://weapons/swords/sword_a/bones/sword_a_ik.gd" id="1_aqp5h"]
+
+[sub_resource type="Curve3D" id="Curve3D_qulg7"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0.5147444, -0.014244018, 0, 0, 0, 0, 0, 0, -0.0075052977, 0.51477283, 0.2756476, 0, 0, 0, 0, 0, 0, -0.00015634298, 0.63983965, 0.5074788, 0, 0, 0, 0, 0, 0, 0.007035196, 0.954617, 0.60497683, 0, 0, 0, 0, 0, 0, 0.0034701824, 1.1428943, 0.5031257, 0, 0, 0, 0, 0, 0, 0.0050954223, 1.2449131, 0.28164095, 0, 0, 0, 0, 0, 0, 0.20084, 1.1398269, -0.20599802),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="Curve3D" id="Curve3D_4kffy"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0.7982727, -0.23687178, 0, 0, 0, 0, 0, 0, 0, 0.7004374, -0.0388717, 0, 0, 0, 0, 0, 0, 0, 0.6887903, 0.16844565, 0, 0, 0, 0, 0, 0, 0, 0.7470256, 0.34781033, 0, 0, 0, 0, 0, 0, 0, 0.89377856, 0.4060455, 0, 0, 0, 0, 0, 0, 3.8728118e-05, 1.0385922, 0.28081775, 0, 0, 0, 0, 0, 0, -0.30130994, 1.1862427, 0.19260454),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[node name="SwordAIk" type="TwoBoneIK3D" unique_id=1243462866]
+influence = 0.0
+setting_count = 1
+settings/0/target_node = NodePath("TargetPath/TargetPathFolow/TargetMarker")
+settings/0/pole_node = NodePath("PolePath/PolePathFollow/PoleMarker")
+settings/0/root_bone_name = "Upper_Arm.R"
+settings/0/root_bone = 9
+settings/0/middle_bone_name = "Lower_Arm.R"
+settings/0/middle_bone = 10
+settings/0/pole_direction = 0
+settings/0/use_virtual_end = true
+settings/0/extend_end_bone = true
+settings/0/end_bone/direction = 6
+settings/0/end_bone/length = 0.03
+script = ExtResource("1_aqp5h")
+PATH_PROGRESS_WAIT_TIME = 0.15
+
+[node name="TargetPath" type="Path3D" parent="." unique_id=924877071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.37348068, 0, 0)
+visible = false
+curve = SubResource("Curve3D_qulg7")
+
+[node name="TargetPathFolow" type="PathFollow3D" parent="TargetPath" unique_id=1150843604]
+transform = Transform3D(-0.9206893, -0.13710892, -0.3652752, 0.06786823, -0.9782055, 0.19609939, -0.38420215, 0.15576603, 0.9099738, 0.13555783, 1.174874, -0.043367058)
+progress = 1.6925633
+loop = false
+
+[node name="TargetMarker" type="Marker3D" parent="TargetPath/TargetPathFolow" unique_id=876866674]
+transform = Transform3D(-1.0000001, 4.656613e-10, 7.636845e-08, -2.3571829e-08, 0.96296406, -0.26962972, -8.381903e-08, -0.26962972, -0.9629641, 0.07327941, -0.049928546, 0.09282459)
+
+[node name="PolePath" type="Path3D" parent="." unique_id=499138500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2526567, 0, 0)
+visible = false
+curve = SubResource("Curve3D_4kffy")
+
+[node name="PolePathFollow" type="PathFollow3D" parent="PolePath" unique_id=1375893540]
+transform = Transform3D(-0.49313682, -0.05026621, 0.86847997, -0.68971115, -0.5858346, -0.42552525, 0.53019214, -0.808848, 0.25422853, -0.30130994, 1.1862428, 0.19260454)
+progress = 1.373533
+loop = false
+
+[node name="PoleMarker" type="Marker3D" parent="PolePath/PolePathFollow" unique_id=1268693194]
+transform = Transform3D(1, -2.9802322e-08, -2.9802322e-08, 0, 1, 1.4901161e-08, -1.4901161e-08, -1.4901161e-08, 0.99999994, -0.06543061, -0.0066695213, 0.11523521)

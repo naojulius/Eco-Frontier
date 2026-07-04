@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cdnx13nehkgvc"]
+
+[ext_resource type="PackedScene" uid="uid://cxtvv2l6npxv1" path="res://weapons/swords/sword_a/scenes/sheath_a.tscn" id="1_2cpoa"]
+[ext_resource type="Script" uid="uid://e0r3ohd4k7ah" path="res://weapons/weapon_sheathed.gd" id="1_oe400"]
+[ext_resource type="PackedScene" uid="uid://ddm5vdlc6rdn7" path="res://weapons/swords/sword_a/scenes/sword_a.tscn" id="2_oe400"]
+
+[node name="SwordASheathed" type="BoneAttachment3D" unique_id=52550899]
+transform = Transform3D(1, 1.2434498e-14, 2.3841858e-07, 1.5548347e-08, 0.9978713, -0.065214545, -2.3791105e-07, 0.065214545, 0.9978713, 0, 0, 0)
+bone_name = "RootBone"
+bone_idx = 0
+script = ExtResource("1_oe400")
+
+[node name="Sheath" parent="." unique_id=2013162564 instance=ExtResource("1_2cpoa")]
+transform = Transform3D(0.8143918, -0.5802047, 0.011323085, 0.5799679, 0.8144248, 0.018726747, -0.020087173, -0.00868389, 0.9997611, -0.16853344, 0.52829665, -0.25498843)
+
+[node name="Weapon" parent="." unique_id=323401683 instance=ExtResource("2_oe400")]
+transform = Transform3D(0.81439203, -0.5802043, 0.011323051, 0.5799678, 0.8144258, 0.018726682, -0.020087158, -0.008683899, 0.99976146, -0.16853344, 0.52829665, -0.25498843)

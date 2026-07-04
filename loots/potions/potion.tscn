@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cjwoplbhmj40"]
+
+[ext_resource type="PackedScene" uid="uid://dtqecwolstgqm" path="res://characters/hud/potion_bottle/potion_bottle.blend" id="1_2uwrn"]
+[ext_resource type="Script" uid="uid://c6w1ja6fkhobw" path="res://loots/loots.gd" id="1_b6eab"]
+
+[node name="Potion" type="Node3D" unique_id=1272721037]
+script = ExtResource("1_b6eab")
+
+[node name="potion_bottle" parent="." unique_id=2048828043 instance=ExtResource("1_2uwrn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12814318, 0)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1875977404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59383667, 0)
+billboard = 1
+text = "Look Here"

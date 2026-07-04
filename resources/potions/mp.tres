@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Potion" format=3 uid="uid://cqsb23mepp468"]
+
+[ext_resource type="Script" uid="uid://c3paeto0vqi6x" path="res://resources/potions/Potions.gd" id="1_2c6su"]
+
+[resource]
+script = ExtResource("1_2c6su")
+type = 1
+potion_description = "A glowing concoction that replenishes focus points and mystical energy. It instantly restores the player's mana pool, allowing mages to cast powerful spells and physical warriors to execute devastating weapon skills during critical moments of combat."
+metadata/_custom_type_script = "uid://c3paeto0vqi6x"

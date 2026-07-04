@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cgydlk6p5qxtt"]
+
+[ext_resource type="PackedScene" uid="uid://ubfot5ou245s" path="res://weapons/shields/models/shield_0.blend" id="1_lljyf"]
+
+[node name="ShieldA" type="Node3D" unique_id=1969290508]
+
+[node name="shield_0" parent="." unique_id=531218025 instance=ExtResource("1_lljyf")]
