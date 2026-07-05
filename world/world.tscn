@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dwj06b8tehrw2" path="res://natures/stones/rocks/rock_a.tscn" id="10_ov2xu"]
 [ext_resource type="PackedScene" uid="uid://c2fe6xlrjipyt" path="res://natures/buildings/houses/house_a.tscn" id="11_mad0u"]
 [ext_resource type="PackedScene" uid="uid://c1nfc3bochxjh" path="res://natures/buildings/houses/house_b.tscn" id="12_ocfjn"]
+[ext_resource type="PackedScene" uid="uid://cjwoplbhmj40" path="res://loots/potions/potion.tscn" id="13_dqqhb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6xmxd"]
 
@@ -176,7 +177,7 @@ transform = Transform3D(-0.98367834, 0, 0.17993549, 0, 1, 0, -0.17993549, 0, -0.
 [node name="TreeB_1" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=171241633 instance=ExtResource("3_h5o24")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.489753, 74.756134)
 
-[node name="TreeB_2" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1088989479 instance=ExtResource("3_h5o24")]
+[node name="TreeB_2" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1655155447 instance=ExtResource("3_h5o24")]
 transform = Transform3D(-0.9866888, 0, 0.16261983, 0, 1, 0, -0.16261983, 0, -0.9866888, -5.0387764, 9.666116, 71.84742)
 
 [node name="TreeA_3" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1847749505 instance=ExtResource("2_4717r")]
@@ -185,17 +186,19 @@ transform = Transform3D(-0.9999374, 0, 0.011187233, 0, 1, 0, -0.011187233, 0, -0
 [node name="TreeA_4" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1424018478 instance=ExtResource("2_4717r")]
 transform = Transform3D(0.28265962, 0, -0.95922023, 0, 1, 0, 0.95922023, 0, 0.28265962, -4.872798, 12.795506, 78.61042)
 
-[node name="TreeB_3" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=339678223 instance=ExtResource("3_h5o24")]
+[node name="TreeB_3" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=32279532 instance=ExtResource("3_h5o24")]
 transform = Transform3D(-0.9999374, 0, 0.011187233, 0, 1, 0, -0.011187233, 0, -0.9999374, -20.358866, 11.726699, 80.13488)
 
-[node name="TreeB_4" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=427521836 instance=ExtResource("3_h5o24")]
+[node name="TreeB_4" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1468799547 instance=ExtResource("3_h5o24")]
 transform = Transform3D(1.1817694, 0, -0.20837757, 0, 1.2, 0, 0.20837757, 0, 1.1817694, -17.353752, 13.577561, 83.09978)
 
 [node name="TreeC_1" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1572030999 instance=ExtResource("4_mmdvd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.299145, 11.633863, 83.49914)
+visible = false
 
 [node name="TreeC_2" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Trees" unique_id=1358299383 instance=ExtResource("4_mmdvd")]
 transform = Transform3D(0.8058583, -0.112148546, -0.5813906, 0.049937926, 0.9912737, -0.12199538, 0.58999866, 0.069277525, 0.8044265, -0.054510117, 6.626981, 62.661293)
+visible = false
 
 [node name="Monuments" type="Node3D" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D" unique_id=419857561]
 
@@ -232,6 +235,11 @@ transform = Transform3D(0.013822649, 0, 0.99990445, 0, 1, 0, -0.99990445, 0, 0.0
 
 [node name="HouseB" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Buildings" unique_id=1634517663 instance=ExtResource("12_ocfjn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.113815, 1.3209903, 30.19944)
+
+[node name="Loots" type="Node3D" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D" unique_id=140399454]
+
+[node name="Potion" parent="Terrain/NavigationRegion3D/Terrain/OccluderInstance3D/Loots" unique_id=1272721037 instance=ExtResource("13_dqqhb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.57654, 1.1079879, 51.24879)
 
 [node name="Character" parent="." unique_id=1609781627 instance=ExtResource("1_6xmxd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.38067794, 0)

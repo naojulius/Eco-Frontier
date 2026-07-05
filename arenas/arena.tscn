@@ -4,6 +4,7 @@
 [ext_resource type="Material" uid="uid://dxlnifhgft6h5" path="res://addons/kenney_prototype_tools/materials/green/material_01.tres" id="2_epw2v"]
 [ext_resource type="PackedScene" uid="uid://d0f51lbir27m8" path="res://characters/character.tscn" id="2_erld0"]
 [ext_resource type="PackedScene" uid="uid://cjwoplbhmj40" path="res://loots/potions/potion.tscn" id="3_huq5d"]
+[ext_resource type="PackedScene" uid="uid://ckem6wmh3k3p4" path="res://natures/bushs/bush_a/bush_a.tscn" id="4_505rd"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_lcvuj"]
 size = Vector2(150, 150)
@@ -66,6 +67,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.2068748)
 
 [node name="Potion2" parent="ArenaNode" unique_id=1650693125 instance=ExtResource("3_huq5d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2877712, 0, -1.944757)
+
+[node name="BushA" parent="ArenaNode" unique_id=1694796714 instance=ExtResource("4_505rd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.6825962)
 
 [node name="EnvironmentNode" type="Node3D" parent="." unique_id=1106814989]
 

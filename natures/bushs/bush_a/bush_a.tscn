@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ckem6wmh3k3p4"]
+
+[ext_resource type="PackedScene" uid="uid://dmcidpyil0c3i" path="res://natures/bushs/bush_a/models/bush_a.blend" id="1_t37j0"]
+
+[node name="BushA" type="Node3D" unique_id=1694796714]
+
+[node name="bush_a" parent="." unique_id=620876362 instance=ExtResource("1_t37j0")]
