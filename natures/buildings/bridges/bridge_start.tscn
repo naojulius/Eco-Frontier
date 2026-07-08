@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cbv0v3uv5nrh6"]
+
+[ext_resource type="PackedScene" uid="uid://f0oujuqoug8w" path="res://natures/buildings/bridges/models/bridge_wood.blend" id="1_pbql4"]
+
+[node name="BridgeStart" type="Node3D" unique_id=202887152]
+
+[node name="bridge_wood" parent="." unique_id=1454092701 instance=ExtResource("1_pbql4")]

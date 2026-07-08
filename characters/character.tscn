@@ -242,18 +242,18 @@ shape = SubResource("BoxShape3D_3xfap")
 
 [node name="character_0" parent="CharacterNode/CharacterMeshNode" unique_id=340207279 instance=ExtResource("2_b1u1o")]
 
-[node name="Skeleton3D" parent="CharacterNode/CharacterMeshNode/character_0/Armature" parent_id_path=PackedInt32Array(340207279, 779231602) index="0" unique_id=1859414121]
-bones/0/position = Vector3(-1.09612715e-10, 0.5052758, -0.020116426)
+[node name="Skeleton3D" parent="CharacterNode/CharacterMeshNode/character_0/Armature" parent_id_path=PackedInt32Array(340207279, 1932389294) index="0" unique_id=256446191]
+bones/0/position = Vector3(-1.8953924e-11, 0.4927012, -0.020116426)
 bones/0/rotation = Quaternion(0.03262464, 1.1914583e-07, 3.889154e-09, 0.9994677)
-bones/1/rotation = Quaternion(0.7070858, -0.0054331603, 0.707086, -0.0054327506)
-bones/2/rotation = Quaternion(3.0864172e-07, 4.2291026e-07, -0.24513239, 0.9694896)
+bones/1/rotation = Quaternion(0.70625407, -0.03471559, 0.7062543, -0.03471511)
+bones/2/rotation = Quaternion(4.1355094e-07, 4.118465e-07, -0.3287527, 0.9444161)
 bones/4/rotation = Quaternion(-3.7422373e-07, 0.8303392, 0.5572583, -3.5964126e-07)
-bones/5/rotation = Quaternion(0.55165154, -0.5239775, 0.3920661, -0.5171193)
-bones/6/rotation = Quaternion(-2.5515573e-07, -1.7008502e-07, -0.26599127, 0.9639754)
-bones/7/rotation = Quaternion(0.6314455, 0.4543756, -0.47656447, -0.409519)
-bones/8/rotation = Quaternion(-1.2475098e-07, 2.0755895e-07, 0.21286777, 0.97708106)
-bones/9/rotation = Quaternion(-0.7156051, -0.12600318, 0.6698423, 0.15278772)
-bones/10/rotation = Quaternion(2.5503766e-07, -4.27256e-07, 0.22844718, 0.9735564)
+bones/5/rotation = Quaternion(0.5265244, -0.55056506, 0.36532497, -0.53496534)
+bones/6/rotation = Quaternion(-3.2978357e-07, -1.6932641e-07, -0.3448821, 0.9386461)
+bones/7/rotation = Quaternion(0.60855824, 0.4876137, -0.45235142, -0.43274474)
+bones/8/rotation = Quaternion(-1.9007341e-07, 2.0992796e-07, 0.30578673, 0.95210004)
+bones/9/rotation = Quaternion(-0.70406616, -0.15979414, 0.6664415, 0.18604438)
+bones/10/rotation = Quaternion(3.5466778e-07, -4.1312353e-07, 0.3157417, 0.94884527)
 bones/12/rotation = Quaternion(-0.018994823, -1.1783978e-14, -4.528729e-09, 0.99981964)
 bones/13/position = Vector3(0.21163467, 0.28554723, 0.31334522)
 bones/14/position = Vector3(0.18177392, 0.004861176, 0.031296488)
@@ -289,7 +289,7 @@ secondary_damp_threshold = 1.0
 script = ExtResource("7_3h56x")
 
 [node name="Healmet" type="BoneAttachment3D" parent="CharacterNode/CharacterMeshNode/character_0/Armature/Skeleton3D" index="3" unique_id=2133431724]
-transform = Transform3D(1, 3.375078e-14, 2.3841855e-07, 6.5005796e-09, 0.99962825, -0.027265549, -2.3832993e-07, 0.027265549, 0.99962825, -1.0960709e-10, 0.92681044, 0.0074324086)
+transform = Transform3D(1, 3.375078e-14, 2.3841855e-07, 6.5005796e-09, 0.99962825, -0.027265549, -2.3832993e-07, 0.027265549, 0.99962825, -1.8948296e-11, 0.91423583, 0.0074324086)
 visible = false
 bone_name = "Head"
 bone_idx = 12
@@ -297,7 +297,7 @@ bone_idx = 12
 [node name="HelmetA" parent="CharacterNode/CharacterMeshNode/character_0/Armature/Skeleton3D/Healmet" unique_id=196118936 instance=ExtResource("6_3h56x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3952981e-09, 0.17619133, -0.00480574)
 
-[node name="AnimationPlayer" parent="CharacterNode/CharacterMeshNode/character_0" index="1" unique_id=1774448475]
+[node name="AnimationPlayer" parent="CharacterNode/CharacterMeshNode/character_0" index="1" unique_id=537587428]
 autoplay = &"walk"
 
 [node name="AnimationTree" type="AnimationTree" parent="CharacterNode/CharacterMeshNode" unique_id=873768882]

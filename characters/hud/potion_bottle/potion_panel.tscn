@@ -70,11 +70,11 @@ transform = Transform3D(0.7530009, 0.6580195, 0, -0.6580195, 0.7530009, 0, 0, 0,
 
 [node name="potion_bottle" parent="SubViewportContainer/SubViewport/Camera/PotionContainer" unique_id=2048828043 instance=ExtResource("2_7ewfd")]
 
-[node name="Bottle" parent="SubViewportContainer/SubViewport/Camera/PotionContainer/potion_bottle" index="0" unique_id=768823008]
+[node name="Bottle" parent="SubViewportContainer/SubViewport/Camera/PotionContainer/potion_bottle" index="0" unique_id=1252732879]
 layers = 2
 material_override = SubResource("StandardMaterial3D_ke030")
 
-[node name="Hat" parent="SubViewportContainer/SubViewport/Camera/PotionContainer/potion_bottle" index="1" unique_id=1821645081]
+[node name="Hat" parent="SubViewportContainer/SubViewport/Camera/PotionContainer/potion_bottle" index="1" unique_id=1668026329]
 layers = 2
 
 [node name="BottleLight" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/Camera" unique_id=1217658266]
