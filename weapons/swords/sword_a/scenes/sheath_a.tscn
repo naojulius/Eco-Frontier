@@ -9,7 +9,7 @@ mesh_layer = 2
 
 [node name="sheath_a" parent="." unique_id=303680556 instance=ExtResource("2_qieq3")]
 
-[node name="Sheath" parent="sheath_a" index="0" unique_id=845825553]
+[node name="Sheath" parent="sheath_a" index="0" unique_id=1941918860]
 layers = 3
 
 [editable path="sheath_a"]

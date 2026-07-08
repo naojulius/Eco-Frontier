@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://dl73fr6y0ffob" path="res://characters/potion_container.gd" id="8_qulg7"]
 [ext_resource type="PackedScene" uid="uid://dqmd2yj4shqex" path="res://characters/hud/bars/bars.tscn" id="9_vliyq"]
 [ext_resource type="Texture2D" uid="uid://cx1l03cflg7qa" path="res://assets/textures/arrows/chevron.png" id="12_qci4v"]
+[ext_resource type="Script" uid="uid://byrjswfc6wlds" path="res://characters/notification.gd" id="15_qci4v"]
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_bnq0n"]
 length = 0.46156204
@@ -186,7 +187,6 @@ blend_point_1/pos = -1.0
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_i1355"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_qulg7"]
-graph_offset = Vector2(-23.20547, 43.474846)
 nodes/output/position = Vector2(1136, 192)
 nodes/Transition/node = SubResource("AnimationNodeTransition_vliyq")
 nodes/Transition/position = Vector2(640, 80)
@@ -242,18 +242,18 @@ shape = SubResource("BoxShape3D_3xfap")
 
 [node name="character_0" parent="CharacterNode/CharacterMeshNode" unique_id=340207279 instance=ExtResource("2_b1u1o")]
 
-[node name="Skeleton3D" parent="CharacterNode/CharacterMeshNode/character_0/Armature" parent_id_path=PackedInt32Array(340207279, 106711655) index="0" unique_id=909662824]
-bones/0/position = Vector3(9.104574e-11, 0.49798632, -0.020116426)
+[node name="Skeleton3D" parent="CharacterNode/CharacterMeshNode/character_0/Armature" parent_id_path=PackedInt32Array(340207279, 779231602) index="0" unique_id=1859414121]
+bones/0/position = Vector3(-1.09612715e-10, 0.5052758, -0.020116426)
 bones/0/rotation = Quaternion(0.03262464, 1.1914583e-07, 3.889154e-09, 0.9994677)
-bones/1/rotation = Quaternion(0.7067102, -0.02367719, 0.70671034, -0.023676744)
-bones/2/rotation = Quaternion(3.7411385e-07, 4.1642502e-07, -0.29729703, 0.9547851)
+bones/1/rotation = Quaternion(0.7070858, -0.0054331603, 0.707086, -0.0054327506)
+bones/2/rotation = Quaternion(3.0864172e-07, 4.2291026e-07, -0.24513239, 0.9694896)
 bones/4/rotation = Quaternion(-3.7422373e-07, 0.8303392, 0.5572583, -3.5964126e-07)
-bones/5/rotation = Quaternion(0.5363215, -0.54045355, 0.3757609, -0.5282737)
-bones/6/rotation = Quaternion(-3.0683742e-07, -1.6613728e-07, -0.3149086, 0.949122)
-bones/7/rotation = Quaternion(0.61716413, 0.47538197, -0.4615705, -0.42435035)
-bones/8/rotation = Quaternion(-1.6482804e-07, 2.0464208e-07, 0.2715212, 0.96243244)
-bones/9/rotation = Quaternion(-0.70875144, -0.14710748, 0.66779965, 0.17342022)
-bones/10/rotation = Quaternion(3.1842836e-07, -4.160007e-07, 0.28319362, 0.95906276)
+bones/5/rotation = Quaternion(0.55165154, -0.5239775, 0.3920661, -0.5171193)
+bones/6/rotation = Quaternion(-2.5515573e-07, -1.7008502e-07, -0.26599127, 0.9639754)
+bones/7/rotation = Quaternion(0.6314455, 0.4543756, -0.47656447, -0.409519)
+bones/8/rotation = Quaternion(-1.2475098e-07, 2.0755895e-07, 0.21286777, 0.97708106)
+bones/9/rotation = Quaternion(-0.7156051, -0.12600318, 0.6698423, 0.15278772)
+bones/10/rotation = Quaternion(2.5503766e-07, -4.27256e-07, 0.22844718, 0.9735564)
 bones/12/rotation = Quaternion(-0.018994823, -1.1783978e-14, -4.528729e-09, 0.99981964)
 bones/13/position = Vector3(0.21163467, 0.28554723, 0.31334522)
 bones/14/position = Vector3(0.18177392, 0.004861176, 0.031296488)
@@ -271,13 +271,13 @@ bones/20/position = Vector3(-0.35966244, 0.45946229, -0.10535538)
 bones/20/rotation = Quaternion(-0.49999967, -0.50000036, 0.5000003, 0.49999973)
 script = ExtResource("3_3h56x")
 
-[node name="Outline" type="MeshInstance3D" parent="CharacterNode/CharacterMeshNode/character_0/Armature/Skeleton3D" index="2" unique_id=683141970]
+[node name="Outline" type="MeshInstance3D" parent="CharacterNode/CharacterMeshNode/character_0/Armature/Skeleton3D" index="1" unique_id=683141970]
 material_override = ExtResource("3_hgjqb")
 mesh = SubResource("ArrayMesh_1de8o")
 skin = SubResource("Skin_juvkx")
 skeleton = NodePath("..")
 
-[node name="lootAtModifier" type="LookAtModifier3D" parent="CharacterNode/CharacterMeshNode/character_0/Armature/Skeleton3D" index="3" unique_id=202931088]
+[node name="lootAtModifier" type="LookAtModifier3D" parent="CharacterNode/CharacterMeshNode/character_0/Armature/Skeleton3D" index="2" unique_id=202931088]
 bone_name = "Head"
 bone = 12
 use_angle_limitation = true
@@ -288,8 +288,8 @@ secondary_limit_angle = 1.5707964
 secondary_damp_threshold = 1.0
 script = ExtResource("7_3h56x")
 
-[node name="Healmet" type="BoneAttachment3D" parent="CharacterNode/CharacterMeshNode/character_0/Armature/Skeleton3D" index="4" unique_id=2133431724]
-transform = Transform3D(1, 3.375078e-14, 2.3841855e-07, 6.5005796e-09, 0.99962825, -0.027265549, -2.3832993e-07, 0.027265549, 0.99962825, 9.105137e-11, 0.919521, 0.0074324086)
+[node name="Healmet" type="BoneAttachment3D" parent="CharacterNode/CharacterMeshNode/character_0/Armature/Skeleton3D" index="3" unique_id=2133431724]
+transform = Transform3D(1, 3.375078e-14, 2.3841855e-07, 6.5005796e-09, 0.99962825, -0.027265549, -2.3832993e-07, 0.027265549, 0.99962825, -1.0960709e-10, 0.92681044, 0.0074324086)
 visible = false
 bone_name = "Head"
 bone_idx = 12
@@ -297,7 +297,7 @@ bone_idx = 12
 [node name="HelmetA" parent="CharacterNode/CharacterMeshNode/character_0/Armature/Skeleton3D/Healmet" unique_id=196118936 instance=ExtResource("6_3h56x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3952981e-09, 0.17619133, -0.00480574)
 
-[node name="AnimationPlayer" parent="CharacterNode/CharacterMeshNode/character_0" index="1" unique_id=768182589]
+[node name="AnimationPlayer" parent="CharacterNode/CharacterMeshNode/character_0" index="1" unique_id=1774448475]
 autoplay = &"walk"
 
 [node name="AnimationTree" type="AnimationTree" parent="CharacterNode/CharacterMeshNode" unique_id=873768882]
@@ -472,6 +472,30 @@ id = 1
 
 [node name="Bars" parent="Hud" unique_id=637213695 instance=ExtResource("9_vliyq")]
 layout_mode = 1
+
+[node name="Notification" type="Control" parent="Hud" unique_id=25048612]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("15_qci4v")
+
+[node name="MarginContainer" type="MarginContainer" parent="Hud/Notification" unique_id=230731519]
+layout_mode = 0
+offset_left = 1526.0
+offset_top = 723.0
+offset_right = 1920.0
+offset_bottom = 912.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="NotificationContainer" type="VBoxContainer" parent="Hud/Notification/MarginContainer" unique_id=1341192431]
+layout_mode = 2
+alignment = 2
 
 [editable path="CharacterNode/CharacterMeshNode/character_0"]
 [editable path="Hud/Potions/WeaponContainerMargin/WeaponContainer/WeaponPanel/SubViewportContainer/SubViewport/Camera/WeaponContainer/SwordA"]

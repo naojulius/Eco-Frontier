@@ -9,7 +9,7 @@ size = Vector3(1.4804688, 4.722275, 1.2324219)
 
 [node name="tree_b" parent="." unique_id=1011756669 instance=ExtResource("1_4eyn1")]
 
-[node name="Plane_001" parent="tree_b" index="2" unique_id=160611720]
+[node name="Plane_001" parent="tree_b" index="2" unique_id=1527888668]
 visible = false
 
 [node name="StaticBody" type="StaticBody3D" parent="." unique_id=27575312]

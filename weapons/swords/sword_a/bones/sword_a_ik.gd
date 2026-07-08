@@ -103,7 +103,7 @@ func _on_front_reached() -> void:
 		var clear_tween = create_tween()
 		clear_tween.tween_property(self, "influence", 0.0, 0.1)
 	
-	print("Movement complete. Weapon state: ", WeaponState.keys()[current_weapon_state])
+	#print("Movement complete. Weapon state: ", WeaponState.keys()[current_weapon_state])
 
 
 ## Gestion de l'affichage de l'arme (Show / Hide)

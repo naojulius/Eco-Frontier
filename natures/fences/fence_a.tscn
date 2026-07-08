@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ggp5mpfvk3c2"]
+
+[ext_resource type="PackedScene" uid="uid://twgspnkoo5k4" path="res://natures/fences/models/fence_a.blend" id="1_mibkp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mibkp"]
+size = Vector3(0.33691406, 3.198059, 1.59375)
+
+[node name="FenceA" type="Node3D" unique_id=66633537]
+
+[node name="fence_a" parent="." unique_id=531451668 instance=ExtResource("1_mibkp")]
+
+[node name="StaticBody" type="StaticBody3D" parent="." unique_id=827415169]
+
+[node name="Collision" type="CollisionShape3D" parent="StaticBody" unique_id=2109941287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445221, 0)
+shape = SubResource("BoxShape3D_mibkp")

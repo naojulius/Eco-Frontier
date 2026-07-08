@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://cyk38fdmqsyuf"]
+
+[ext_resource type="Script" uid="uid://b46dxg1tqu3ee" path="res://characters/hud/notifications/notification_panel.gd" id="1_rg1hd"]
+[ext_resource type="FontFile" uid="uid://bqkaxbkktble1" path="res://assets/fonts/Rubik-Regular.ttf" id="2_vcuui"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vcuui"]
+bg_color = Color(0, 0, 0, 0.1882353)
+border_width_left = 1000
+border_color = Color(0, 0, 0, 0)
+border_blend = true
+
+[sub_resource type="Animation" id="Animation_2pkqh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k37ve"]
+resource_name = "hide"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vcuui"]
+resource_name = "init"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2pkqh"]
+_data = {
+&"RESET": SubResource("Animation_2pkqh"),
+&"hide": SubResource("Animation_k37ve"),
+&"init": SubResource("Animation_vcuui")
+}
+
+[node name="NotificationPanel" type="Panel" unique_id=54074906]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 30)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vcuui")
+script = ExtResource("1_rg1hd")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=46101375]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_right = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=726806485]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_vcuui")
+theme_override_fonts/bold_font = ExtResource("2_vcuui")
+theme_override_fonts/bold_italics_font = ExtResource("2_vcuui")
+theme_override_fonts/italics_font = ExtResource("2_vcuui")
+theme_override_fonts/mono_font = ExtResource("2_vcuui")
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 18
+theme_override_font_sizes/bold_italics_font_size = 18
+theme_override_font_sizes/italics_font_size = 18
+theme_override_font_sizes/mono_font_size = 18
+bbcode_enabled = true
+text = " HP Potion [b]×1[/b]"
+fit_content = true
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=928616839]
+libraries/ = SubResource("AnimationLibrary_2pkqh")
+autoplay = &"init"
+
+[node name="Timer" type="Timer" parent="." unique_id=164713437]
+one_shot = true

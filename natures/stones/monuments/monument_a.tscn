@@ -92,7 +92,7 @@ size = Vector3(12.890747, 8.3810425, 3.7929688)
 
 [node name="monument_a" parent="." unique_id=189833782 instance=ExtResource("1_lubh4")]
 
-[node name="Rock" parent="monument_a" index="0" unique_id=369108222]
+[node name="Rock" parent="monument_a" index="0" unique_id=1324469109]
 mesh = SubResource("ArrayMesh_wwt84")
 
 [node name="Outline" type="MeshInstance3D" parent="monument_a" unique_id=1106863620]

@@ -40,4 +40,4 @@ func _update_child_layers(current_node: Node) -> void:
 
 func _set_layer(mesh: MeshInstance3D) -> void:
 	mesh.layers = layer
-	print(mesh.name, " set to layer mask: ", mesh.layers)
+	#print(mesh.name, " set to layer mask: ", mesh.layers)

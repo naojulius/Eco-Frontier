@@ -11,9 +11,9 @@ extends Node3D
 
 const IDLE_SPRING_LENGTH: float = 2.5
 const WALK_SPRING_LENGTH: float = 3.0
-const RUN_SPRING_LENGTH: float = 3.5
+const RUN_SPRING_LENGTH: float = 4.5
 const SPRING_LENGTH_SPEED: float = 3.0
-const ROLL_SPRING_LENGTH: float = 4.5
+const ROLL_SPRING_LENGTH: float = 5.5
 
 var character_movement_state: int = 0
 var can_rotate_cam: bool = true

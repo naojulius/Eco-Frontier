@@ -28,6 +28,9 @@ var lerp_input_dir: Vector2 = Vector2.ZERO
 var jump_blend: float = 0.0
 var roll_timer: float = 0.0 # Added: Tracks how long the roll has been active
 
+func _ready() -> void:
+	add_to_group("PLAYER")
+
 func _physics_process(delta: float) -> void:
 	# Add gravity
 	if not is_on_floor():

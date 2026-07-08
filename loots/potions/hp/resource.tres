@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Loot" format=3 uid="uid://cwuaelhib3r5s"]
+
+[ext_resource type="PackedScene" uid="uid://c7cu7aka0fsak" path="res://loots/ui/loot_ui.tscn" id="1_tvbdm"]
+[ext_resource type="Script" uid="uid://dfoocwsi4h43y" path="res://loots/loot.gd" id="2_o0slg"]
+
+[resource]
+script = ExtResource("2_o0slg")
+loot_ui = ExtResource("1_tvbdm")
+command_text = "_ICON_ Pick up"
+notification_text = "_ICON_ You got HP Potion x2"
+command_icon = "res://assets/textures/prompts/pc/keyboard_e_outline.png"
+notification_icon = "res://icon.svg"
+notification_icon_size = Vector2(25, 25)
+metadata/_custom_type_script = "uid://dfoocwsi4h43y"

@@ -52,7 +52,7 @@ mesh_layer = 2
 
 [node name="sword_a" parent="." unique_id=501130460 instance=ExtResource("1_6vpne")]
 
-[node name="Sword" parent="sword_a" index="0" unique_id=1358553829]
+[node name="Sword" parent="sword_a" index="0" unique_id=1025124764]
 layers = 3
 
 [node name="Outline" type="MeshInstance3D" parent="sword_a" unique_id=1794916418]

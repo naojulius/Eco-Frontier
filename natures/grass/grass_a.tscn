@@ -1,23 +1,3 @@
 [gd_scene format=3 uid="uid://d2emmie3gvgn5"]
 
-[ext_resource type="Texture2D" uid="uid://b10l3asdc2g01" path="res://natures/grass/textures/green_grass.png" id="1_iqhss"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uh8c1"]
-transparency = 1
-cull_mode = 2
-albedo_texture = ExtResource("1_iqhss")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_uh8c1"]
-size = Vector2(0.05, 0.5)
-
 [node name="GrassA" type="Node3D" unique_id=1261115759]
-
-[node name="G_1" type="MeshInstance3D" parent="." unique_id=1675689065]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.23885122, 0)
-material_override = SubResource("StandardMaterial3D_uh8c1")
-mesh = SubResource("PlaneMesh_uh8c1")
-
-[node name="G_2" type="MeshInstance3D" parent="." unique_id=1299479824]
-transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0.23885122, 0)
-material_override = SubResource("StandardMaterial3D_uh8c1")
-mesh = SubResource("PlaneMesh_uh8c1")
